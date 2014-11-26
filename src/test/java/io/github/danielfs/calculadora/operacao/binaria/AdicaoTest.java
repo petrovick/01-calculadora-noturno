@@ -7,11 +7,13 @@ import static org.junit.Assert.*;
 public class AdicaoTest
 {
   private Adicao adicao;
+  private Divisao divisao;
   
   @Before
   public void inicializar()
   {
     adicao = new Adicao();
+    divisao = new Divisao();
   }
   
   @Test
@@ -20,5 +22,14 @@ public class AdicaoTest
     double valorEsperado = 5;
     double valorRetornado = adicao.calcular(2,3);
     assertEquals(valorEsperado, valorRetornado, 0);
+  }
+  
+  @Test
+  public void deveriaRetornar2QuandoPassa10e5()
+  {
+    double valorEsperado = 2;
+    double valorRetornado = adicao.calcular(10,5);
+    assertEquals(valorEsperado, valorRetornado, 0);
+  }
   }
 }
