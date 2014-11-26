@@ -18,7 +18,7 @@ public class AdicaoTest
   public void deveriaRetornar5QuandoPassa2e3()
   {
     double valorEsperado = 5;
-    double valorRetornado = adicao.calcular(2,3), valorEsperado);
+    double valorRetornado = adicao.calcular(2,3);
     assertEquals(valorEsperado, valorRetornado, 0);
   }
 }
