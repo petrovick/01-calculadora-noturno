@@ -8,12 +8,14 @@ public class AdicaoTest
 {
   private Adicao adicao;
   private Divisao divisao;
+  private Multiplicacao multiplicacao;
   
   @Before
   public void inicializar()
   {
     adicao = new Adicao();
     divisao = new Divisao();
+    multiplicacao = new Multiplicacao();
   }
   
   @Test
@@ -28,7 +30,7 @@ public class AdicaoTest
   public void deveriaRetornar2QuandoPassa10e5()
   {
     double valorEsperado = 2;
-    double valorRetornado = adicao.calcular(10,5);
+    double valorRetornado = divisao.calcular(10,5);
     assertEquals(valorEsperado, valorRetornado, 0);
   }
   
@@ -36,7 +38,7 @@ public class AdicaoTest
   public void deveriaRetornar10QuandoPassa5e2()
   {
     double valorEsperado = 10;
-    double valorRetornado = adicao.calcular(5,2);
+    double valorRetornado = multiplicacao.calcular(5,2);
     assertEquals(valorEsperado, valorRetornado, 0);
   }
 }
