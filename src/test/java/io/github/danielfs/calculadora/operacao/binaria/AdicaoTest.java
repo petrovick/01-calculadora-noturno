@@ -31,5 +31,12 @@ public class AdicaoTest
     double valorRetornado = adicao.calcular(10,5);
     assertEquals(valorEsperado, valorRetornado, 0);
   }
+  
+  @Test
+  public void deveriaRetornar10QuandoPassa5e2()
+  {
+    double valorEsperado = 10;
+    double valorRetornado = adicao.calcular(5,2);
+    assertEquals(valorEsperado, valorRetornado, 0);
   }
 }
